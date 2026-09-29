@@ -100,11 +100,12 @@ Implemented in v0.1:
 - action-specific outcome regression;
 - DM, IPW, SNIPS, and DR estimators;
 - support/weight diagnostics;
-- strict sample separation between policy learning, nuisance fitting, and OPE evaluation.
+- strict sample separation between policy learning, nuisance fitting, and OPE evaluation;
+- K-fold cross-fitted nuisance prediction for fixed-policy OPE;
+- doubly robust influence-score standard error and normal-approximation 95% interval.
 
 Natural extensions:
 
-- cross-fitting;
 - doubly robust policy scores for direct empirical-welfare maximization;
 - policy trees and other interpretable constrained classes;
 - sensitivity analysis for unobserved confounding;
