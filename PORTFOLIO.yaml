@@ -1,0 +1,18 @@
+schema_version: 1
+repository: industrial-reinforcement-learning
+role: umbrella
+axis: methodology
+area: industrial-reinforcement-learning
+status: active
+owner: jorsacademy
+projects:
+  - cpp-deep-rl-libtorch
+  - java-burlap-reinforcement-learning
+  - offline-rl-industrial-process-control
+  - production-control-with-mpc-vs-rl
+  - ray-tune-distributed-policy-search
+  - safe-rl-constrained-production-control
+conventions:
+  provenance_records: true
+  reproducibility_expected: true
+  benchmark_assumptions_documented: true
