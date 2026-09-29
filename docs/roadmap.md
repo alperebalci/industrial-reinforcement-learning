@@ -73,11 +73,13 @@ Implemented:
 - neural discrete CQL-style conservative offline Q-learning;
 - target-policy support reporting;
 - Fitted Q Evaluation (FQE) from logged transitions before simulator testing.
+- separate contextual causal-policy benchmark with held-out DM, IPW, SNIPS, and doubly robust OPE;
+- behavior-propensity and importance-weight support diagnostics for observational policy evaluation.
 
 Remaining:
 
 - IQL-style offline policy learning;
-- richer off-policy evaluation diagnostics;
+- richer sequential/MDP off-policy evaluation diagnostics beyond the contextual-bandit benchmark;
 - offline RL on scheduling or maintenance logs;
 - dataset-shift and behavior-policy sensitivity studies.
 

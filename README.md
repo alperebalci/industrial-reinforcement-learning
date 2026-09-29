@@ -10,6 +10,7 @@ This repository is the primary umbrella repository for this Jors Academy researc
 - [`cpp-deep-rl-libtorch`](projects/cpp-deep-rl-libtorch/)
 - [`java-burlap-reinforcement-learning`](projects/java-burlap-reinforcement-learning/)
 - [`offline-rl-industrial-process-control`](projects/offline-rl-industrial-process-control/)
+- [`causal-policy-learning-and-ope`](projects/causal-policy-learning-and-ope/)
 - [`production-control-with-mpc-vs-rl`](projects/production-control-with-mpc-vs-rl/)
 - [`ray-tune-distributed-policy-search`](projects/ray-tune-distributed-policy-search/)
 - [`safe-rl-constrained-production-control`](projects/safe-rl-constrained-production-control/)
