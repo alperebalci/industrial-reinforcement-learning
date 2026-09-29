@@ -50,7 +50,11 @@ def estimate_from_predictions(
     ipw = float(np.mean(weights * y))
     weight_sum = float(np.sum(weights))
     snips = float(np.sum(weights * y) / weight_sum) if weight_sum > 0.0 else float("nan")
-    dr = float(np.mean(mu_pi + weights * (y - mu_observed)))
+    dr_scores = mu_pi + weights * (y - mu_observed)
+    dr = float(np.mean(dr_scores))
+    dr_standard_error = (
+        float(np.std(dr_scores, ddof=1) / np.sqrt(dr_scores.size)) if dr_scores.size > 1 else 0.0
+    )
 
     weight_square_sum = float(np.sum(weights**2))
     ess = weight_sum**2 / weight_square_sum if weight_square_sum > 0.0 else 0.0
@@ -60,6 +64,9 @@ def estimate_from_predictions(
         "ipw": ipw,
         "snips": snips,
         "dr": dr,
+        "dr_standard_error": dr_standard_error,
+        "dr_ci95_lower": dr - 1.96 * dr_standard_error,
+        "dr_ci95_upper": dr + 1.96 * dr_standard_error,
         "matched_rate": float(np.mean(matched)),
         "effective_sample_size": float(ess),
         "min_observed_propensity": float(np.min(observed_propensity)),
