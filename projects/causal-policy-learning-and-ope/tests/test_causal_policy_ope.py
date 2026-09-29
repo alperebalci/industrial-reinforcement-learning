@@ -1,6 +1,7 @@
 import numpy as np
 
 from causal_policy_ope import (
+    cross_fitted_policy_value,
     estimate_from_predictions,
     estimate_policy_value,
     fit_budget_policy,
@@ -64,3 +65,17 @@ def test_logged_propensities_have_overlap() -> None:
     data = generate_logged_data(seed=6, n=1000)
     assert np.min(data.true_propensity) >= 0.05
     assert np.max(data.true_propensity) <= 0.95
+
+
+
+def test_cross_fitted_dr_is_finite_and_reports_interval() -> None:
+    policy_train = generate_logged_data(seed=21, n=1800)
+    evaluation = generate_logged_data(seed=22, n=2400)
+    policy = fit_budget_policy(policy_train, budget=0.35)
+
+    estimates = cross_fitted_policy_value(evaluation, policy, folds=4, seed=9)
+
+    assert np.isfinite(estimates["dr"])
+    assert estimates["dr_standard_error"] > 0.0
+    assert estimates["dr_ci95_lower"] < estimates["dr"] < estimates["dr_ci95_upper"]
+    assert estimates["folds"] == 4.0
