@@ -57,3 +57,12 @@ jobs:
 
       - name: Offline CQL-style inventory smoke
         run: python experiments/offline_inventory_cql.py --smoke
+
+
+      - name: Tabular manufacturing-control tests
+        run: |
+          pip install -e "projects/tabular-rl-manufacturing-control[test]"
+          pytest -q projects/tabular-rl-manufacturing-control/tests
+
+      - name: Tabular manufacturing-control smoke
+        run: python -m manufacturing_rl.benchmark --training-episodes 40 --episodes 5 --seed 17
