@@ -88,6 +88,22 @@ Remaining:
 - RL warm-starting or parameterizing mathematical optimization;
 - digital-twin policy evaluation under distribution shift.
 
+## Phase 6 — production deployment and controlled online adaptation
+
+The repository now distinguishes frequent policy inference from policy learning in the live plant. The deployment track is documented in [`production_rlops_deployment.md`](production_rlops_deployment.md).
+
+Candidate work:
+
+- shadow-mode policy evaluation against the incumbent controller;
+- explicit safety-filter intervention and operator-override metrics;
+- historian-to-policy update pipelines with immutable policy/state/action/reward versions;
+- drift detection followed by gated retraining rather than automatic unrestricted adaptation;
+- supervisory RL over PLC/MPC layers with deterministic fallback;
+- deployment tests for stale sensors, delayed actions, communication loss and rollback;
+- bounded online adaptation experiments where exploration authority and abort conditions are explicit.
+
+The term **RLOps** is used informally for this operational layer. The benchmark focus is the engineering problem — policy governance, OT integration, safety, monitoring and controlled updates — rather than branding a separate software category.
+
 ## Planned industrial benchmark families
 
 - multi-echelon inventory;
