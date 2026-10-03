@@ -12,6 +12,7 @@ projects:
   - production-control-with-mpc-vs-rl
   - ray-tune-distributed-policy-search
   - safe-rl-constrained-production-control
+  - tabular-rl-manufacturing-control
 conventions:
   provenance_records: true
   reproducibility_expected: true

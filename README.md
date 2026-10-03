@@ -13,8 +13,9 @@ This repository is the primary umbrella repository for this Jors Academy researc
 - [`production-control-with-mpc-vs-rl`](projects/production-control-with-mpc-vs-rl/)
 - [`ray-tune-distributed-policy-search`](projects/ray-tune-distributed-policy-search/)
 - [`safe-rl-constrained-production-control`](projects/safe-rl-constrained-production-control/)
+- [`tabular-rl-manufacturing-control`](projects/tabular-rl-manufacturing-control/)
 
-Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` provenance record. The snapshot preserves the source repository's default-branch files at consolidation time; repository-level history and metadata remain separate from the snapshot.
+Consolidated projects keep their own files and a `SOURCE_REPOSITORY.md` provenance record. The snapshot preserves each source repository's default-branch files at consolidation time; repository-level history and metadata remain separate from the snapshot. `tabular-rl-manufacturing-control` is a directly developed benchmark extension rather than a recovered source-repository snapshot.
 <!-- portfolio-umbrella:end -->
 
 A research-oriented benchmark repository for studying **when reinforcement learning is useful in Industrial Engineering and Operations Research — and when classical optimization should remain the preferred method**.
