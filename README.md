@@ -679,6 +679,7 @@ See:
 
 - [`docs/when_to_use_rl.md`](docs/when_to_use_rl.md)
 - [`docs/evaluation_protocol.md`](docs/evaluation_protocol.md)
+- [`docs/production_rlops_deployment.md`](docs/production_rlops_deployment.md)
 - [`docs/roadmap.md`](docs/roadmap.md)
 
 ## Scope
